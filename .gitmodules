@@ -1,3 +1,12 @@
 [submodule "libraries/kicad-ESP8266"]
 	path = libraries/kicad-ESP8266
 	url = https://github.com/jdunmire/kicad-ESP8266
+[submodule "libraries/kicad-lib"]
+	path = libraries/kicad-lib
+	url = git@github.com:skorokithakis/kicad-lib.git
+[submodule "libraries/suf_display.pretty"]
+	path = libraries/suf_display.pretty
+	url = git@github.com:suf-KiCAD/suf_display.pretty.git
+[submodule "libraries/suf-electronics-KiCAD-lib"]
+	path = libraries/suf-electronics-KiCAD-lib
+	url = git@github.com:sufzoli/suf-electronics-KiCAD-lib.git
