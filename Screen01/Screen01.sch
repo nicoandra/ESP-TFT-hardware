@@ -18,7 +18,7 @@ L GitLibsNodeMCU:NodeMCU_Amica_R2 U1
 U 1 1 5C043C9C
 P 2350 2000
 F 0 "U1" H 2350 2925 50  0000 C CNN
-F 1 "NodeMCU_Amica_R2" H 2350 2834 50  0000 C CNN
+F 1 "NodeMCU" H 2350 2834 50  0000 C CNN
 F 2 "NodeMCU Git:NodeMCU_Amica_R2" H 2600 2000 50  0001 C CNN
 F 3 "" H 2600 2000 50  0000 C CNN
 	1    2350 2000
@@ -36,10 +36,10 @@ F 3 "http://pan.baidu.com/s/11Y990" H 5750 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0101
+L power:+5V #PWR01
 U 1 1 5C0442B4
 P 1200 3450
-F 0 "#PWR0101" H 1200 3300 50  0001 C CNN
+F 0 "#PWR01" H 1200 3300 50  0001 C CNN
 F 1 "+5V" H 1215 3623 50  0000 C CNN
 F 2 "" H 1200 3450 50  0001 C CNN
 F 3 "" H 1200 3450 50  0001 C CNN
@@ -47,10 +47,10 @@ F 3 "" H 1200 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0102
+L power:GND #PWR02
 U 1 1 5C044340
 P 1600 3700
-F 0 "#PWR0102" H 1600 3450 50  0001 C CNN
+F 0 "#PWR02" H 1600 3450 50  0001 C CNN
 F 1 "GND" H 1605 3527 50  0000 C CNN
 F 2 "" H 1600 3700 50  0001 C CNN
 F 3 "" H 1600 3700 50  0001 C CNN
@@ -161,35 +161,51 @@ Wire Wire Line
 	5250 2400 4800 2400
 Text Label 4800 2400 0    50   ~ 0
 TCS
-$Comp
-L Connector_Generic_MountingPin:Conn_01x03_MountingPin J1
-U 1 1 5C0491B7
-P 4350 1050
-F 0 "J1" H 4437 1016 50  0000 L CNN
-F 1 "Conn_01x03_MountingPin" H 4437 925 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x03_P1.00mm_Vertical_SMD_Pin1Right" H 4350 1050 50  0001 C CNN
-F 3 "~" H 4350 1050 50  0001 C CNN
-	1    4350 1050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4150 1050 3650 1050
 Wire Wire Line
 	2800 1500 3050 1500
 Text Label 3050 1500 0    50   ~ 0
 TCS
-Text Label 3650 1050 0    50   ~ 0
-PIRDATA
 Wire Wire Line
 	2800 1600 3450 1600
 Text Label 3450 1600 0    50   ~ 0
-PIRDATA
+ECHO
 Wire Wire Line
-	4150 950  3800 950 
-Text Label 3800 950  0    50   ~ 0
+	1900 2200 1650 2200
+Text Label 1650 2200 0    50   ~ 0
+GND
+$Comp
+L Connector:Conn_01x04_Female J1
+U 1 1 5C05D3CC
+P 4400 950
+F 0 "J1" H 4427 926 50  0000 L CNN
+F 1 "UlrSonc" H 4450 850 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-4_P5.08mm" H 4400 950 50  0001 C CNN
+F 3 "~" H 4400 950 50  0001 C CNN
+	1    4400 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 850  3950 850 
+Text Label 3950 850  0    50   ~ 0
 5V
 Wire Wire Line
-	4150 1150 3750 1150
-Text Label 3750 1150 0    50   ~ 0
+	4200 950  4000 950 
+Text Label 4000 950  0    50   ~ 0
+TRIG
+Wire Wire Line
+	4200 1050 3900 1050
+Text Label 3900 1050 0    50   ~ 0
+ECHO
+Wire Wire Line
+	4200 1150 3950 1150
+Text Label 3950 1150 0    50   ~ 0
+GND
+Wire Wire Line
+	2800 1300 3050 1300
+Text Label 3050 1300 0    50   ~ 0
+TRIG
+Wire Wire Line
+	2800 1900 2950 1900
+Text Label 2950 1900 0    50   ~ 0
 GND
 $EndSCHEMATC
